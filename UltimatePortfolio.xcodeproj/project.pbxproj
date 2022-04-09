@@ -14,6 +14,8 @@
 		8160345F280031CB00BFFCC8 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8160345D280031CB00BFFCC8 /* Main.xcdatamodeld */; };
 		816034612800348200BFFCC8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816034602800348200BFFCC8 /* DataController.swift */; };
 		81603465280081FE00BFFCC8 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81603464280081FE00BFFCC8 /* CloudKit.framework */; };
+		8193831D2801D9150053E83C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193831C2801D9150053E83C /* HomeView.swift */; };
+		8193831F2801DA900053E83C /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193831E2801DA900053E83C /* ProjectsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		81603462280081E200BFFCC8 /* UltimatePortfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UltimatePortfolio.entitlements; sourceTree = "<group>"; };
 		81603464280081FE00BFFCC8 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		816034662800820F00BFFCC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8193831C2801D9150053E83C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8193831E2801DA900053E83C /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				8160345D280031CB00BFFCC8 /* Main.xcdatamodeld */,
 				816034532800146600BFFCC8 /* Assets.xcassets */,
 				816034552800146600BFFCC8 /* Preview Content */,
+				8193831C2801D9150053E83C /* HomeView.swift */,
+				8193831E2801DA900053E83C /* ProjectsView.swift */,
 			);
 			path = UltimatePortfolio;
 			sourceTree = "<group>";
@@ -159,9 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8193831F2801DA900053E83C /* ProjectsView.swift in Sources */,
 				8160345F280031CB00BFFCC8 /* Main.xcdatamodeld in Sources */,
 				816034612800348200BFFCC8 /* DataController.swift in Sources */,
 				816034522800146500BFFCC8 /* ContentView.swift in Sources */,
+				8193831D2801D9150053E83C /* HomeView.swift in Sources */,
 				816034502800146500BFFCC8 /* UltimatePortfolioApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

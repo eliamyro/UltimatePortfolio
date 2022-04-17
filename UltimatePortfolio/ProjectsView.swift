@@ -14,6 +14,9 @@ struct ProjectsView: View {
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
     
+    @State private var showingSortOrder = false
+    @State private var sortOrder: Item.SortOrder = .optimized
+    
     var showClosedProjects: Bool
     @FetchRequest var projects: FetchedResults<Project>
     
@@ -27,7 +30,7 @@ struct ProjectsView: View {
             List {
                 ForEach(projects) { project in
                     Section(header: ProjectHeaderView(project: project)) {
-                        ForEach(project.projectItems) { item in
+                        ForEach(project.projectItems(using: sortOrder)) { item in
                             ItemRowView(item: item)
                         }
                         .onDelete { offsets in
@@ -54,22 +57,39 @@ struct ProjectsView: View {
                             }
                         }
                     }
+                    .confirmationDialog("Change items sorting", isPresented: $showingSortOrder) {
+                        Button("Optimized") { sortOrder = .optimized}
+                        Button("Creation Date") { sortOrder = .creationDate }
+                        Button("Title") { sortOrder = .title }
+                    } message: {
+                        Text("Sort Items")
+                    }
                 }
             }
             
             .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
             .toolbar {
-                if showClosedProjects == false {
-                    Button {
-                        withAnimation {
-                            let project = Project(context: managedObjectContext)
-                            project.closed = false
-                            project.creationDate = Date()
-                            
-                            dataController.save()
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    if showClosedProjects == false {
+                        Button {
+                            withAnimation {
+                                let project = Project(context: managedObjectContext)
+                                project.closed = false
+                                project.creationDate = Date()
+                                
+                                dataController.save()
+                            }
+                        } label: {
+                            Label("Add Project", systemImage: "plus")
                         }
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        showingSortOrder.toggle()
                     } label: {
-                        Label("Add Project", systemImage: "plus")
+                        Label("Sort", systemImage: "arrow.up.arrow.down")
                     }
                 }
             }

@@ -27,43 +27,44 @@ struct ProjectsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(projects) { project in
-                    Section(header: ProjectHeaderView(project: project)) {
-                        ForEach(project.projectItems(using: sortOrder)) { item in
-                            ItemRowView(item: item)
-                        }
-                        .onDelete { offsets in
-                            let allItems = project.projectItems
-                            for offset in offsets {
-                                let item = allItems[offset]
-                                dataController.delete(item)
-                            }
-                            
-                            dataController.save()
-                        }
-                        
-                        if showClosedProjects == false {
-                            Button {
-                                withAnimation {
-                                    let item = Item(context: managedObjectContext)
-                                    item.project = project
-                                    item.creationDate = Date()
-                                    
-                                    dataController.save()                                    
+            Group {
+                if projects.isEmpty {
+                    Text("There's nothing here right now.")
+                        .foregroundColor(.secondary)
+                } else {
+                    List {
+                        ForEach(projects) { project in
+                            Section(header: ProjectHeaderView(project: project)) {
+                                ForEach(project.projectItems(using: sortOrder)) { item in
+                                    ItemRowView(project: project, item: item)
                                 }
-                            } label: {
-                                Label("Add Item", systemImage: "plus")
+                                .onDelete { offsets in
+                                    let allItems = project.projectItems(using: sortOrder)
+                                    for offset in offsets {
+                                        let item = allItems[offset]
+                                        dataController.delete(item)
+                                    }
+                                    
+                                    dataController.save()
+                                }
+                                
+                                if showClosedProjects == false {
+                                    Button {
+                                        withAnimation {
+                                            let item = Item(context: managedObjectContext)
+                                            item.project = project
+                                            item.creationDate = Date()
+                                            
+                                            dataController.save()
+                                        }
+                                    } label: {
+                                        Label("Add Item", systemImage: "plus")
+                                    }
+                                }
                             }
                         }
                     }
-                    .confirmationDialog("Change items sorting", isPresented: $showingSortOrder) {
-                        Button("Optimized") { sortOrder = .optimized}
-                        Button("Creation Date") { sortOrder = .creationDate }
-                        Button("Title") { sortOrder = .title }
-                    } message: {
-                        Text("Sort Items")
-                    }
+                    .listStyle(.insetGrouped)
                 }
             }
             
@@ -93,6 +94,15 @@ struct ProjectsView: View {
                     }
                 }
             }
+            .confirmationDialog("Change items sorting", isPresented: $showingSortOrder) {
+                Button("Optimized") { sortOrder = .optimized}
+                Button("Creation Date") { sortOrder = .creationDate }
+                Button("Title") { sortOrder = .title }
+            } message: {
+                Text("Sort Items")
+            }
+            
+            SelectSomethingView()
         }
     }
 }

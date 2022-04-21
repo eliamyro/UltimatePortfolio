@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8143249F28102180004A7D67 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8143249E28102180004A7D67 /* Color-Additions.swift */; };
 		816034502800146500BFFCC8 /* UltimatePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8160344F2800146500BFFCC8 /* UltimatePortfolioApp.swift */; };
 		816034522800146500BFFCC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816034512800146500BFFCC8 /* ContentView.swift */; };
 		816034542800146600BFFCC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 816034532800146600BFFCC8 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8143249E28102180004A7D67 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
 		8160344C2800146500BFFCC8 /* UltimatePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimatePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8160344F2800146500BFFCC8 /* UltimatePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimatePortfolioApp.swift; sourceTree = "<group>"; };
 		816034512800146500BFFCC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				8193831C2801D9150053E83C /* HomeView.swift */,
 				8188ABB4280EAB78006D6E3D /* AwardsView.swift */,
 				8193831E2801DA900053E83C /* ProjectsView.swift */,
+				8143249E28102180004A7D67 /* Color-Additions.swift */,
 				8188ABAC280DFE47006D6E3D /* SelectSomethingView.swift */,
 				8192C668280C888100127FE3 /* Sequence-Sorting.swift */,
 				81C647B42802FD2F0082FD16 /* ItemRowView.swift */,
@@ -214,6 +217,7 @@
 				8188ABB5280EAB78006D6E3D /* AwardsView.swift in Sources */,
 				8193831F2801DA900053E83C /* ProjectsView.swift in Sources */,
 				8160345F280031CB00BFFCC8 /* Main.xcdatamodeld in Sources */,
+				8143249F28102180004A7D67 /* Color-Additions.swift in Sources */,
 				819284DB280558CF00408D13 /* EditProjectView.swift in Sources */,
 				816034612800348200BFFCC8 /* DataController.swift in Sources */,
 				8188ABAD280DFE47006D6E3D /* SelectSomethingView.swift in Sources */,
@@ -365,6 +369,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,6 +401,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

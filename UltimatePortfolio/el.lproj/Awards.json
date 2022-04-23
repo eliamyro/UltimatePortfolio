@@ -1,0 +1,162 @@
+[
+    {
+        "name": "Πρώτα Βήματα",
+        "description": "Βάλε την πρώτη σου εργασία.",
+        "color": "Light Blue",
+        "criterion": "items",
+        "value": 1,
+        "image": "figure.walk"
+    },
+    {
+        "name": "Τέλειο Ξεκίνημα",
+        "description": "Πρόσθεσε 10 εργασίες.",
+        "color": "Light Blue",
+        "criterion": "items",
+        "value": 10,
+        "image": "hand.thumbsup.fill"
+    },
+    {
+        "name": "Εξέλιση",
+        "description": "Πρόσθεσε 20 εργασίες.",
+        "color": "Light Blue",
+        "criterion": "items",
+        "value": 20,
+        "image": "tray.and.arrow.up.fill"
+    },
+    {
+        "name": "Ταχύτητα",
+        "description": "Πρόσθεσε 50 εργασίες.",
+        "color": "Light Blue",
+        "criterion": "items",
+        "value": 50,
+        "image": "speedometer"
+    },
+    {
+        "name": "Κάνοντας Κύματα",
+        "description": "Πρόσθεσε 100 εργασίες.",
+        "color": "Light Blue",
+        "criterion": "items",
+        "value": 100,
+        "image": "dot.radiowaves.left.and.right"
+    },
+    {
+        "name": "Υψηλός Εκτελεστής",
+        "description": "Πρόσθεσε 250 εργασίες.",
+        "color": "Light Blue",
+        "criterion": "items",
+        "value": 250,
+        "image": "square.stack.3d.up.fill"
+    },
+    {
+        "name": "Εκτελεστής Αστέρι",
+        "description": "Πρόσθεσε 500 εργασίες.",
+        "color": "Light Blue",
+        "criterion": "items",
+        "value": 500,
+        "image": "star.circle.fill"
+    },
+    {
+        "name": "Εκτελεστήες Πρωταθλητής",
+        "description": "Πρόσθεσε 1000 εργασίες.",
+        "color": "Light Blue",
+        "criterion": "items",
+        "value": 1000,
+        "image": "crown.fill"
+    },
+    {
+        "name": "Τσεκάροντας Κουτάκια",
+        "description": "Ολοκλήρωσε την πρώτη σου εργασία.",
+        "color": "Orange",
+        "criterion": "complete",
+        "value": 1,
+        "image": "checkmark.shield.fill"
+    },
+    {
+        "name": "Ροκάρεις",
+        "description": "Ολοκλήρωσε 10 εργασίες.",
+        "color": "Orange",
+        "criterion": "complete",
+        "value": 10,
+        "image": "guitars.fill"
+    },
+    {
+        "name": "20 είναι πολλά",
+        "description": "Ολοκλήρωσε 20 εργασίες.",
+        "color": "Orange",
+        "criterion": "complete",
+        "value": 20,
+        "image": "20.square.fill"
+    },
+    {
+        "name": "Διάνα!",
+        "description": "Ολοκλήρωσε 50 εργασίες.",
+        "color": "Orange",
+        "criterion": "complete",
+        "value": 50,
+        "image": "target"
+    },
+    {
+        "name": "Πετώντας Ψηλά",
+        "description": "Ολοκλήρωσε 100 εργασίες.",
+        "color": "Orange",
+        "criterion": "complete",
+        "value": 100,
+        "image": "airplane.circle.fill"
+    },
+    {
+        "name": "Έχεις πάρει φωτιά!",
+        "description": "Ολοκλήρωσε 250 εργασίες.",
+        "color": "Orange",
+        "criterion": "complete",
+        "value": 250,
+        "image": "flame.fill"
+    },
+    {
+        "name": "Τσεκάροντας κουτάκια επαγγελματικά",
+        "description": "Ολοκλήρωσε 500 εργασίες.",
+        "color": "Orange",
+        "criterion": "complete",
+        "value": 500,
+        "image": "text.badge.checkmark"
+    },
+    {
+        "name": "Μπαμ!",
+        "description": "Ολοκλήρωσε 1000 εργασίες.",
+        "color": "Orange",
+        "criterion": "complete",
+        "value": 1000,
+        "image": "bolt.circle.fill"
+    },
+    {
+        "name": "Πρώτο Μήνυμα",
+        "description": "Πόσταρες το πρώτο σου μήνυμα σε ομαδική συνομιλία.",
+        "color": "Purple",
+        "criterion": "chat",
+        "value": 1,
+        "image": "person.fill"
+    },
+    {
+        "name": "Συχνός Ομιλητής",
+        "description": "Πόσταρες 10 μηνύματα στην ομαδική συνομιλία.",
+        "color": "Purple",
+        "criterion": "chat",
+        "value": 10,
+        "image": "message.fill"
+    },
+    {
+        "name": "Ενεργός Μέλος",
+        "description": "Πόσταρες 100 μηνύματα στην ομαδική συνομιλία.",
+        "color": "Purple",
+        "criterion": "chat",
+        "value": 100,
+        "image": "arrow.up.heart.fill"
+    },
+    {
+        "name": "Υποστηρικτής",
+        "description": "Αγόρασες το premium πακέτο.",
+        "color": "Green",
+        "criterion": "unlock",
+        "value": 0,
+        "image": "dollarsign.square.fill"
+    }
+]

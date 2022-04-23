@@ -45,6 +45,8 @@ struct EditItemView: View {
                 Toggle("Mark Completed", isOn: $completed.onChange(update))
             }
         }
+        
+        .navigationTitle("Edit Item")
         .onDisappear(perform: dataController.save)
     }
     

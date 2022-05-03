@@ -41,9 +41,9 @@ struct ProjectsView: View {
                             addItem(to: project)
                         } label: {
                             if UIAccessibility.isVoiceOverRunning {
-                                Text("Add Project")
+                                Text("Add Item")
                             } else {
-                                Label("Add Project", systemImage: "plus")
+                                Label("Add Item", systemImage: "plus")
                             }
                         }
                     }

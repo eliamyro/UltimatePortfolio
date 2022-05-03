@@ -22,7 +22,10 @@ struct HomeView: View {
     init() {
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Item.priority, ascending: false)]
-        fetchRequest.predicate = NSPredicate(format: "completed = false AND project.closed = false")
+        let completedPredicate = NSPredicate(format: "completed = false")
+        let openPredicate = NSPredicate(format: "project.closed = false")
+        let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate, openPredicate])
+        fetchRequest.predicate = compoundPredicate
         fetchRequest.fetchLimit = 10
         
         _items = FetchRequest(fetchRequest: fetchRequest)

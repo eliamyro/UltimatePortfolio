@@ -15,7 +15,7 @@ extension Item {
     }
     
     var itemTitle: String {
-        title ?? NSLocalizedString("New Item", comment: "The fallback item title")
+        title ?? NSLocalizedString("new_item", comment: "The fallback item title")
     }
     
     var itemDetail: String {

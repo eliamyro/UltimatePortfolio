@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelectSomethingView: View {
     var body: some View {
-        Text("Please select something from the menu to begin.")
+        Text("select_from_menu_message")
             .italic()
             .foregroundColor(.secondary)
     }

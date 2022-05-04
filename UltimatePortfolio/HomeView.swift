@@ -45,8 +45,8 @@ struct HomeView: View {
                         }
                         
                         VStack(alignment: .leading) {
-                            ItemListView(title: "Up next", items: items.prefix(3))
-                            ItemListView(title: "More to explore", items: items.dropFirst(3))
+                            ItemListView(title: "up_next", items: items.prefix(3))
+                            ItemListView(title: "more_to_explore", items: items.dropFirst(3))
                         }
                         .padding(.horizontal)
                     }
@@ -54,7 +54,7 @@ struct HomeView: View {
                 .background(Color.systemGroupedBackground)
             }
             
-            .navigationTitle("Home")
+            .navigationTitle("home")
         }
     }
 }

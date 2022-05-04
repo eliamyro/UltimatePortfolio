@@ -27,26 +27,26 @@ struct EditItemView: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Basic Settings")) {
-                TextField("Title", text: $title.onChange(update))
-                TextField("Description", text: $detail.onChange(update))
+            Section(header: Text("basic_settings")) {
+                TextField("title", text: $title.onChange(update))
+                TextField("description", text: $detail.onChange(update))
             }
             
-            Section(header: Text("Priority")) {
-                Picker("Priority", selection: $priority.onChange(update)) {
-                    Text("Low").tag(1)
-                    Text("Medium").tag(2)
-                    Text("High").tag(3)
+            Section(header: Text("priority")) {
+                Picker("priority", selection: $priority.onChange(update)) {
+                    Text("low").tag(1)
+                    Text("medium").tag(2)
+                    Text("high").tag(3)
                 }
                 .pickerStyle(.segmented)
             }
             
             Section {
-                Toggle("Mark Completed", isOn: $completed.onChange(update))
+                Toggle("mark_completed", isOn: $completed.onChange(update))
             }
         }
         
-        .navigationTitle("Edit Item")
+        .navigationTitle("edit_item")
         .onDisappear(perform: dataController.save)
     }
     

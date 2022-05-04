@@ -30,12 +30,12 @@ struct EditProjectView: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Basic Settings")) {
-                TextField("Title", text: $title.onChange(update))
-                TextField("Description", text: $detail.onChange(update))
+            Section(header: Text("basic_settings")) {
+                TextField("title", text: $title.onChange(update))
+                TextField("description", text: $detail.onChange(update))
             }
             
-            Section(header: Text("Custom Project Color")) {
+            Section(header: Text("custom_project_color")) {
                 LazyVGrid(columns: colorColumns) {
                     ForEach(Project.colors, id: \.self, content: colorButton)
                 }
@@ -43,24 +43,24 @@ struct EditProjectView: View {
             }
             
             Section {
-                Button(project.closed ? "Reopen this project" : "Close this project") {
+                Button(project.closed ? "reopen_project" : "close_project") {
                     project.closed.toggle()
                     update()
                 }
                 
-                Button("Delete this project", role: .destructive) {
+                Button("delete_project", role: .destructive) {
                     showingDeleteConfirm.toggle()
                 }
                 
             } footer: {
-                Text("Closing a project moves it from the Open to Closed tab. Deleting it removes the project entirely.")
+                Text("close_project_message")
             }
         }
         
-        .navigationTitle("Edit Project")
+        .navigationTitle("edit_project")
         .onDisappear(perform: dataController.save)
         .alert(isPresented: $showingDeleteConfirm) {
-            Alert(title: Text("Delete project?"), message: Text("Are you sure you want to delete this project? You will also delete all the items it contains."), primaryButton: .default(Text("Delete"), action: delete), secondaryButton: .cancel())
+            Alert(title: Text("delete_project"), message: Text("delete_project_message"), primaryButton: .default(Text("delete"), action: delete), secondaryButton: .cancel())
         }
     }
     

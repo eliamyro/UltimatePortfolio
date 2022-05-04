@@ -10,21 +10,25 @@ import SwiftUI
 struct ProjectsView: View {
     @EnvironmentObject var dataController: DataController
     @Environment(\.managedObjectContext) var managedObjectContext
-    
+
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
-    
+
     @State private var showingSortOrder = false
     @State private var sortOrder: Item.SortOrder = .optimized
-    
+
     var showClosedProjects: Bool
     @FetchRequest var projects: FetchedResults<Project>
-    
+
     init(showClosedProjects: Bool) {
         self.showClosedProjects = showClosedProjects
-        _projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)], predicate: NSPredicate(format: "closed = %d", showClosedProjects))
+        _projects = FetchRequest<Project>(
+            entity: Project.entity(),
+            sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)],
+            predicate: NSPredicate(format: "closed = %d", showClosedProjects)
+        )
     }
-    
+
     var projectsList: some View {
         List {
             ForEach(projects) { project in
@@ -35,7 +39,7 @@ struct ProjectsView: View {
                     .onDelete { offsets in
                         delete(offsets, from: project)
                     }
-                    
+
                     if showClosedProjects == false {
                         Button {
                             addItem(to: project)
@@ -52,7 +56,7 @@ struct ProjectsView: View {
         }
         .listStyle(.insetGrouped)
     }
-    
+
     var addProjectToolbarItem: some ToolbarContent {
         ToolbarItem(placement: .navigationBarTrailing) {
             if showClosedProjects == false {
@@ -62,7 +66,7 @@ struct ProjectsView: View {
             }
         }
     }
-    
+
     var sortOrderToolbarItem: some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
             Button {
@@ -72,7 +76,7 @@ struct ProjectsView: View {
             }
         }
     }
-    
+
     var body: some View {
         NavigationView {
             Group {
@@ -83,7 +87,7 @@ struct ProjectsView: View {
                     projectsList
                 }
             }
-            
+
             .navigationTitle(showClosedProjects ? "closed_projects" : "open_projects")
             .toolbar {
                 addProjectToolbarItem
@@ -96,45 +100,45 @@ struct ProjectsView: View {
             } message: {
                 Text("sort_items")
             }
-            
+
             SelectSomethingView()
         }
     }
-    
+
     private func addProject() {
         withAnimation {
             let project = Project(context: managedObjectContext)
             project.closed = false
             project.creationDate = Date()
-            
+
             dataController.save()
         }
     }
-    
+
     private func addItem(to project: Project) {
         withAnimation {
             let item = Item(context: managedObjectContext)
             item.project = project
             item.creationDate = Date()
-            
+
             dataController.save()
         }
     }
-    
+
     private func delete(_ offsets: IndexSet, from project: Project) {
         let allItems = project.projectItems(using: sortOrder)
         for offset in offsets {
             let item = allItems[offset]
             dataController.delete(item)
         }
-        
+
         dataController.save()
     }
 }
 
 struct ProjectsView_Previews: PreviewProvider {
     static let dataController = DataController.preview
-    
+
     static var previews: some View {
         ProjectsView(showClosedProjects: false)
             .environment((\.managedObjectContext), dataController.container.viewContext)

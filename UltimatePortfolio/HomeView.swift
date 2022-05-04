@@ -10,15 +10,20 @@ import SwiftUI
 
 struct HomeView: View {
     static let tag: String? = "Home"
-    
+
     @EnvironmentObject var dataController: DataController
-    @FetchRequest(entity: Project.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)], predicate: NSPredicate(format: "closed = false")) var projects: FetchedResults<Project>
+    @FetchRequest(
+        entity: Project.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)],
+        predicate: NSPredicate(format: "closed = false")
+    ) var projects: FetchedResults<Project>
+
     @FetchRequest var items: FetchedResults<Item>
-    
+
     let projectRows: [GridItem] = [
         GridItem(.fixed(100))
     ]
-    
+
     init() {
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Item.priority, ascending: false)]
@@ -27,10 +32,10 @@ struct HomeView: View {
         let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate, openPredicate])
         fetchRequest.predicate = compoundPredicate
         fetchRequest.fetchLimit = 10
-        
+
         _items = FetchRequest(fetchRequest: fetchRequest)
     }
-    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -43,7 +48,7 @@ struct HomeView: View {
                             .padding([.horizontal, .top])
                             .fixedSize(horizontal: false, vertical: true)
                         }
-                        
+
                         VStack(alignment: .leading) {
                             ItemListView(title: "up_next", items: items.prefix(3))
                             ItemListView(title: "more_to_explore", items: items.dropFirst(3))
@@ -53,7 +58,7 @@ struct HomeView: View {
                 }
                 .background(Color.systemGroupedBackground)
             }
-            
+
             .navigationTitle("home")
         }
     }

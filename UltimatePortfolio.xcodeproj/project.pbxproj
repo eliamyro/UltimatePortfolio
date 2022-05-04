@@ -15,13 +15,14 @@
 		8160345F280031CB00BFFCC8 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8160345D280031CB00BFFCC8 /* Main.xcdatamodeld */; };
 		816034612800348200BFFCC8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816034602800348200BFFCC8 /* DataController.swift */; };
 		81603465280081FE00BFFCC8 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81603464280081FE00BFFCC8 /* CloudKit.framework */; };
+		816D528B2822785000FC1CC2 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 816D528A2822785000FC1CC2 /* .swiftlint.yml */; };
 		81737CA12804731C0008E00A /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737CA02804731C0008E00A /* ProjectHeaderView.swift */; };
 		81737CA3280479950008E00A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81737CA2280479950008E00A /* Colors.xcassets */; };
 		81877AEF2811DBAC001388C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81877AF12811DBAC001388C5 /* Localizable.strings */; };
 		81877AF52811E424001388C5 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 81877AF72811E424001388C5 /* Localizable.stringsdict */; };
 		8188ABAD280DFE47006D6E3D /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188ABAC280DFE47006D6E3D /* SelectSomethingView.swift */; };
 		8188ABB1280EA64F006D6E3D /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188ABB0280EA64F006D6E3D /* Bundle-Decodable.swift */; };
-		8188ABB3280EAAB7006D6E3D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188ABB2280EAAB7006D6E3D /* File.swift */; };
+		8188ABB3280EAAB7006D6E3D /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188ABB2280EAAB7006D6E3D /* Award.swift */; };
 		8188ABB5280EAB78006D6E3D /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188ABB4280EAB78006D6E3D /* AwardsView.swift */; };
 		819284DB280558CF00408D13 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819284DA280558CF00408D13 /* EditProjectView.swift */; };
 		8192C669280C888100127FE3 /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192C668280C888100127FE3 /* Sequence-Sorting.swift */; };
@@ -49,6 +50,7 @@
 		81603462280081E200BFFCC8 /* UltimatePortfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UltimatePortfolio.entitlements; sourceTree = "<group>"; };
 		81603464280081FE00BFFCC8 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		816034662800820F00BFFCC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		816D528A2822785000FC1CC2 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		81737CA02804731C0008E00A /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		81737CA2280479950008E00A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		81877AF02811DBAC001388C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 		81877AF82811E427001388C5 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = el; path = el.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		8188ABAC280DFE47006D6E3D /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
 		8188ABB0280EA64F006D6E3D /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
-		8188ABB2280EAAB7006D6E3D /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		8188ABB2280EAAB7006D6E3D /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		8188ABB4280EAB78006D6E3D /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 		819284DA280558CF00408D13 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		8192C668280C888100127FE3 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
@@ -113,7 +115,7 @@
 				81C647B628032E600082FD16 /* Binding-OnChange.swift */,
 				816034512800146500BFFCC8 /* ContentView.swift */,
 				8188ABB0280EA64F006D6E3D /* Bundle-Decodable.swift */,
-				8188ABB2280EAAB7006D6E3D /* File.swift */,
+				8188ABB2280EAAB7006D6E3D /* Award.swift */,
 				816034602800348200BFFCC8 /* DataController.swift */,
 				8160345D280031CB00BFFCC8 /* Main.xcdatamodeld */,
 				81877AF12811DBAC001388C5 /* Localizable.strings */,
@@ -135,6 +137,7 @@
 				81C868E92802327300B0A064 /* Project+CoreDataHelpers.swift */,
 				81C868E7280231FF00B0A064 /* Item+CoreDataHelpers.swift */,
 				819284DA280558CF00408D13 /* EditProjectView.swift */,
+				816D528A2822785000FC1CC2 /* .swiftlint.yml */,
 			);
 			path = UltimatePortfolio;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8160345A2800146600BFFCC8 /* Build configuration list for PBXNativeTarget "UltimatePortfolio" */;
 			buildPhases = (
+				816D5289282270E500FC1CC2 /* SwiftLint */,
 				816034482800146500BFFCC8 /* Sources */,
 				816034492800146500BFFCC8 /* Frameworks */,
 				8160344A2800146500BFFCC8 /* Resources */,
@@ -217,6 +221,7 @@
 				81877AEF2811DBAC001388C5 /* Localizable.strings in Resources */,
 				81737CA3280479950008E00A /* Colors.xcassets in Resources */,
 				81BF9EC32813FF2C00EB88FE /* Awards.json in Resources */,
+				816D528B2822785000FC1CC2 /* .swiftlint.yml in Resources */,
 				816034572800146600BFFCC8 /* Preview Assets.xcassets in Resources */,
 				816034542800146600BFFCC8 /* Assets.xcassets in Resources */,
 				81877AF52811E424001388C5 /* Localizable.stringsdict in Resources */,
@@ -224,6 +229,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		816D5289282270E500FC1CC2 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		816034482800146500BFFCC8 /* Sources */ = {
@@ -245,7 +271,7 @@
 				816034522800146500BFFCC8 /* ContentView.swift in Sources */,
 				81C647B728032E600082FD16 /* Binding-OnChange.swift in Sources */,
 				8192C669280C888100127FE3 /* Sequence-Sorting.swift in Sources */,
-				8188ABB3280EAAB7006D6E3D /* File.swift in Sources */,
+				8188ABB3280EAAB7006D6E3D /* Award.swift in Sources */,
 				8188ABB1280EA64F006D6E3D /* Bundle-Decodable.swift in Sources */,
 				8193831D2801D9150053E83C /* HomeView.swift in Sources */,
 				816034502800146500BFFCC8 /* UltimatePortfolioApp.swift in Sources */,

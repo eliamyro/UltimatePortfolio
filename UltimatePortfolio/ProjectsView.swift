@@ -41,9 +41,9 @@ struct ProjectsView: View {
                             addItem(to: project)
                         } label: {
                             if UIAccessibility.isVoiceOverRunning {
-                                Text("Add Item")
+                                Text("add_item")
                             } else {
-                                Label("Add Item", systemImage: "plus")
+                                Label("add_item", systemImage: "plus")
                             }
                         }
                     }
@@ -57,7 +57,7 @@ struct ProjectsView: View {
         ToolbarItem(placement: .navigationBarTrailing) {
             if showClosedProjects == false {
                 Button(action: addProject) {
-                    Label("Add Project", systemImage: "plus")
+                    Label("add_project", systemImage: "plus")
                 }
             }
         }
@@ -68,7 +68,7 @@ struct ProjectsView: View {
             Button {
                 showingSortOrder.toggle()
             } label: {
-                Label("Sort", systemImage: "arrow.up.arrow.down")
+                Label("sort", systemImage: "arrow.up.arrow.down")
             }
         }
     }
@@ -77,24 +77,24 @@ struct ProjectsView: View {
         NavigationView {
             Group {
                 if projects.isEmpty {
-                    Text("There's nothing here right now.")
+                    Text("nothing_here_message")
                         .foregroundColor(.secondary)
                 } else {
                     projectsList
                 }
             }
             
-            .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
+            .navigationTitle(showClosedProjects ? "closed_projects" : "open_projects")
             .toolbar {
                 addProjectToolbarItem
                 sortOrderToolbarItem
             }
-            .confirmationDialog("Change items sorting", isPresented: $showingSortOrder) {
-                Button("Optimized") { sortOrder = .optimized}
-                Button("Creation Date") { sortOrder = .creationDate }
-                Button("Title") { sortOrder = .title }
+            .confirmationDialog("change_items_sorting", isPresented: $showingSortOrder) {
+                Button("optimized") { sortOrder = .optimized}
+                Button("creation_date") { sortOrder = .creationDate }
+                Button("title") { sortOrder = .title }
             } message: {
-                Text("Sort Items")
+                Text("sort_items")
             }
             
             SelectSomethingView()

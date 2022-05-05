@@ -1,5 +1,5 @@
 //
-//  AssetTest.swift
+//  AssetTests.swift
 //  UltimatePortfolioTests
 //
 //  Created by Elias Myronidis on 4/5/22.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import UltimatePortfolio
 
-class AssetTest: XCTestCase {
+class AssetTests: XCTestCase {
 
     func testColorsExist() {
         for color in Project.colors {

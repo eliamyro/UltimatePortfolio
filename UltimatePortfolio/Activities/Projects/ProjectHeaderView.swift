@@ -18,7 +18,8 @@ struct ProjectHeaderView: View {
                 ProgressView(value: project.completionAmount)
                     .tint(Color(project.projectColor))
             }
-            .accessibilityElement(children: .combine)
+
+            .padding(.bottom, 10)
 
             Spacer()
 
@@ -27,7 +28,7 @@ struct ProjectHeaderView: View {
                     .imageScale(.large)
             }
         }
-        .padding(.bottom, 10)
+        .accessibilityElement(children: .combine)
     }
 }
 

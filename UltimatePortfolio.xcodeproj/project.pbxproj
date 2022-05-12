@@ -46,6 +46,8 @@
 		81C647B728032E600082FD16 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C647B628032E600082FD16 /* Binding-OnChange.swift */; };
 		81C868E8280231FF00B0A064 /* Item+CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C868E7280231FF00B0A064 /* Item+CoreDataHelpers.swift */; };
 		81C868EA2802327300B0A064 /* Project+CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C868E92802327300B0A064 /* Project+CoreDataHelpers.swift */; };
+		81C8CBF8282CE6CF00B73C98 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C8CBF7282CE6CF00B73C98 /* HomeViewModel.swift */; };
+		81C8CBFA282CF2E300B73C98 /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C8CBF9282CF2E300B73C98 /* ItemRowViewModel.swift */; };
 		81FC0C8E2823AB0900980665 /* AwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC0C8D2823AB0900980665 /* AwardTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +116,8 @@
 		81C647B628032E600082FD16 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 		81C868E7280231FF00B0A064 /* Item+CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		81C868E92802327300B0A064 /* Project+CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		81C8CBF7282CE6CF00B73C98 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		81C8CBF9282CF2E300B73C98 /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
 		81FC0C8D2823AB0900980665 /* AwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +219,7 @@
 				8193831C2801D9150053E83C /* HomeView.swift */,
 				81AAB7D3281BEFF40069BE0B /* ProjectSummaryView.swift */,
 				81AAB7D1281BEE600069BE0B /* ItemListView.swift */,
+				81C8CBF7282CE6CF00B73C98 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				819284DA280558CF00408D13 /* EditProjectView.swift */,
 				81C647B22802F9F10082FD16 /* EditItemView.swift */,
 				81C647B42802FD2F0082FD16 /* ItemRowView.swift */,
+				81C8CBF9282CF2E300B73C98 /* ItemRowViewModel.swift */,
 				8188ABAC280DFE47006D6E3D /* SelectSomethingView.swift */,
 			);
 			path = Projects;
@@ -471,6 +477,7 @@
 				81737CA12804731C0008E00A /* ProjectHeaderView.swift in Sources */,
 				8188ABB5280EAB78006D6E3D /* AwardsView.swift in Sources */,
 				8193831F2801DA900053E83C /* ProjectsView.swift in Sources */,
+				81C8CBF8282CE6CF00B73C98 /* HomeViewModel.swift in Sources */,
 				8160345F280031CB00BFFCC8 /* Main.xcdatamodeld in Sources */,
 				8143249F28102180004A7D67 /* Color-Additions.swift in Sources */,
 				819284DB280558CF00408D13 /* EditProjectView.swift in Sources */,
@@ -485,6 +492,7 @@
 				8188ABB1280EA64F006D6E3D /* Bundle-Decodable.swift in Sources */,
 				8193831D2801D9150053E83C /* HomeView.swift in Sources */,
 				816034502800146500BFFCC8 /* UltimatePortfolioApp.swift in Sources */,
+				81C8CBFA282CF2E300B73C98 /* ItemRowViewModel.swift in Sources */,
 				81C868E8280231FF00B0A064 /* Item+CoreDataHelpers.swift in Sources */,
 				81895506282A46A30022DE9E /* ProjectsViewModel.swift in Sources */,
 				81C647B32802F9F10082FD16 /* EditItemView.swift in Sources */,

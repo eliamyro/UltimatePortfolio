@@ -39,7 +39,6 @@ class UltimatePortfolioUITests: XCTestCase {
         app.buttons["Add Project"].tap()
         XCTAssertEqual(app.tables.cells.count, 1, "There should be 1 list row after adding a project.")
 
-
         for tapCount in 1 ... 3 {
             app.buttons["Add Item"].tap()
             XCTAssertEqual(app.tables.cells.count, tapCount + 1, "There should be \(tapCount) list rows.")

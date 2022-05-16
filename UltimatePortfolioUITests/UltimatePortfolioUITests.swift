@@ -45,7 +45,7 @@ class UltimatePortfolioUITests: XCTestCase {
         }
     }
 
-    // Cant make it work TODO: Fix it
+    // Cant make it work: Fix it
 //    func testEditingProjectUpdatesCorrectly() {
 //        app.buttons["Open"].tap()
 //        XCTAssertEqual(app.tables.cells.count, 0, "There should be no list rows initially.")

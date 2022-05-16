@@ -5,17 +5,20 @@
 //  Created by Elias Myronidis on 12/4/22.
 //
 
+import CoreHaptics
 import SwiftUI
 
 struct EditProjectView: View {
     @EnvironmentObject var dataController: DataController
     @Environment(\.dismiss) var dismiss
 
-    let project: Project
+    @ObservedObject var project: Project
     @State private var title: String
     @State private var detail: String
     @State private var color: String
     @State private var showingDeleteConfirm: Bool = false
+
+    @State private var hapticEngine = try? CHHapticEngine()
 
     let colorColumns = [
         GridItem(.adaptive(minimum: 44))
@@ -43,10 +46,7 @@ struct EditProjectView: View {
             }
 
             Section {
-                Button(project.closed ? "reopen_project" : "close_project") {
-                    project.closed.toggle()
-                    update()
-                }
+                Button(project.closed ? "reopen_project" : "close_project", action: toggleClosed)
 
                 Button("delete_project", role: .destructive) {
                     showingDeleteConfirm.toggle()
@@ -77,6 +77,46 @@ struct EditProjectView: View {
     func delete() {
         dataController.delete(project)
         update()
+    }
+
+    func toggleClosed() {
+        project.closed.toggle()
+
+        if project.closed {
+            do {
+                try hapticEngine?.start()
+                let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 0)
+                let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 1)
+
+                let start = CHHapticParameterCurve.ControlPoint(relativeTime: 0, value: 1)
+                let end = CHHapticParameterCurve.ControlPoint(relativeTime: 1, value: 0)
+
+                let parameterCurve = CHHapticParameterCurve(
+                    parameterID: .hapticIntensityControl,
+                    controlPoints: [start, end],
+                    relativeTime: 0
+                )
+
+                let event1 = CHHapticEvent(
+                    eventType: .hapticTransient,
+                    parameters: [sharpness, intensity],
+                    relativeTime: 0
+                )
+
+                let event2 = CHHapticEvent(eventType: .hapticContinuous,
+                                           parameters: [sharpness, intensity],
+                                           relativeTime: 0.125,
+                                           duration: 1
+                )
+
+                let pattern = try CHHapticPattern(events: [event1, event2], parameterCurves: [parameterCurve])
+
+                let player = try hapticEngine?.makePlayer(with: pattern)
+                try player?.start(atTime: 0)
+            } catch {
+                print("Failed to create haptic.")
+            }
+        }
     }
 
     func colorButton(for item: String) -> some View {

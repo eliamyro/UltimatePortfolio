@@ -80,7 +80,6 @@ struct ProjectsView: View {
                     Text("nothing_here_message")
                         .foregroundColor(.secondary)
                 } else {
-                    Button("creation_date") { viewModel.sortOrder = .creationDate }
                     projectsList
                 }
             }
